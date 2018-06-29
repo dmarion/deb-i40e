@@ -1,0 +1,34 @@
+#!/usr/bin/make -f
+PKG=i40e
+VER=$(shell dpkg-parsechangelog | grep Version: | head -1 | sed -e "s/Version: //")
+URL=http://download.sourceforge.net/project/e1000/$(PKG)%20stable/$(VER)/$(PKG)-$(VER).tar.gz
+TARBALL=../$(PKG)_$(VER).orig.tar.gz
+DH_VERBOSE = 1
+
+include /usr/share/dpkg/default.mk
+
+$(TARBALL):
+	wget -O $(TARBALL) $(URL)
+
+%:
+	dh $@ --with dkms
+
+override_dh_auto_build: $(TARBALL)
+	tar zxvf $(TARBALL)
+
+override_dh_auto_install:
+	# src
+	mkdir -p debian/$(PKG)-dkms/usr/src/$(PKG)-$(VER)/$(PKG)
+	install -m 644 $(PKG)-$(VER)/src/* debian/$(PKG)-dkms/usr/src/$(PKG)-$(VER)
+	# man
+	mkdir -p debian/$(PKG)-dkms/usr/share/man/man7
+	install -m 644 $(PKG)-$(VER)/*.7 debian/$(PKG)-dkms/usr/share/man/man7
+	sed -i -e 's/.TH i40e 1/.TH i40e 7/' debian/$(PKG)-dkms/usr/share/man/man7/*.7
+	# README
+	mkdir -p debian/$(PKG)-dkms/usr/share/doc/$(PKG)-dkms/
+	install -m 644 $(PKG)-$(VER)/README debian/$(PKG)-dkms/usr/share/doc/$(PKG)-dkms
+	install -m 644 $(PKG)-$(VER)/COPYING debian/$(PKG)-dkms/usr/share/doc/$(PKG)-dkms
+
+override_dh_dkms:
+	sed -e "s/#MODULE_NAME#/$(PKG)/" debian/dkms.in > debian/dkms
+	dh_dkms -V $(VER)

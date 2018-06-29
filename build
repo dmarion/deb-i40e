@@ -1,0 +1,8 @@
+#!/bin/sh
+
+TMP_DIR=$(mktemp -d -p $PWD)
+cd ${TMP_DIR}
+ln -s ../debian
+dpkg-buildpackage -b -uc -us
+cd ..
+rm -rf ${TMP_DIR}
