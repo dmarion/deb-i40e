@@ -1,3 +1,39 @@
+i40e (2.7.12) unstable; urgency=medium
+
+  * Fix issue with link-down-on-close private flag feature
+
+ -- Damjan Marion <damarion@me.com>  Tue, 06 Nov 2018 17:57:05 +0100
+
+i40e (2.7.11) unstable; urgency=medium
+
+  * Implement ADq feature
+  * Add support for configuring VFs through sysfs
+  * Add XDP support
+  * Add support Forward Error Correction (FEC) on 25G links
+  * Allow disabling FW LLDP (requires updated firmware)
+  * Fix bug where link could be forced down after MTU change
+  * Add support for new kernel APIs
+  * Fix WARN_ON() if MSI-X not available
+  * Fix issue with lost link when forcing link mode on some adapters
+  * Add support to allow the FW update tool to upgrade/downgrade from any FW
+    version to any other FW version
+    Note: this may require a power cycle as an intermediate step.
+  * Fix kernel panic with repeated quick enable/disable of VFs
+  * Fix possible TX timeout with DCB on some kernels
+  * Re-enable TSO after MTU change
+  * Fix potential panic on shutdown with many MSI-X vectors
+  * Add VEB stats to ethtool
+  * Fix panic on suspend with RDMA client driver active
+  * Fix timing issue with assigning VFs to VMs using virsh
+  * Restore TCPv4 input set when re-enabling ATR
+  * Performance fixes with Adaptive ITR
+  * Code cleanups
+  * Minor bug fixes
+  * Add support for RHEL 7.5
+  * Add support for SLES12SP3
+
+ -- Damjan Marion <dmarion@me.com>  Tue, 06 Nov 2018 17:55:04 +0100
+
 i40e (2.4.10) unstable; urgency=medium
 
   * Add support for RHEL 7.5
