@@ -1,3 +1,9 @@
+i40e (2.7.26) unstable; urgency=medium
+
+  * Dynamic Device Personalization (DDP) profile upload feature implemented
+
+ -- Damjan Marion <damarion@me.com>  Tue, 18 Dec 2018 10:11:01 +0100
+
 i40e (2.7.12) unstable; urgency=medium
 
   * Fix issue with link-down-on-close private flag feature
