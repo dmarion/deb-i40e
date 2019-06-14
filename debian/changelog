@@ -1,3 +1,37 @@
+i40e (2.9.21) unstable; urgency=medium
+
+  * Fix update visual effect for advertised FEC mode
+  * Fix vf hotplug into vm
+  * Fix don't report link up for a VF who hasn't enabled queues
+  * Fix incorrect ethtool statistics veb and veb.tc_
+  * Fix descriptor count manipulation via 'ethtool -G'
+  * Add loging disable-fw-lldp flag change by ethtool
+  * Add make visible changed vf mac on host 'ip link show $pf'
+  * Add log entry while creating or deleting TC0
+  * And some minor internal code refactorings
+
+ -- Damjan Marion <damarion@me.com>  Tue, 14 Jun 2019 20:35:41 +0100
+
+i40e (2.8.43) unstable; urgency=medium
+
+  * EOL Itanium support
+  * Added support for persistent F/W LLDP feature
+  * Added support for 2.5G/5G speeds for some cards
+  * Added support for EEE ethtool --set-eee  $pf eee off/on for some cards
+  * Added ability to change vf mac address from host by ip command
+  * Added ability for untrusted VF to create up to 16 VLANs
+  * Added ability for untrusted VF to add 16 multicast filter
+  * Added support for few new cards
+  * Many minor bug fixes, code hardening and logging enhancements
+
+ -- Damjan Marion <damarion@me.com>  Tue, 14 Jun 2019 20:30:22 +0100
+
+i40e (2.7.29) unstable; urgency=medium
+
+  * update README
+
+ -- Damjan Marion <damarion@me.com>  Tue, 14 Jun 2019 20:20:43 +0100
+
 i40e (2.7.26) unstable; urgency=medium
 
   * Dynamic Device Personalization (DDP) profile upload feature implemented
