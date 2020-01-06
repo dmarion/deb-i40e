@@ -1,3 +1,26 @@
+i40e (2.10.19.30) unstable; urgency=medium
+
+  * Fix ingress/egress mirroring issues
+  * Fix VF spawning on servers with ncpu >= 192
+  * Fix recofery mode detection
+  * Fix ethtool to report SW and FW versions in recovery mode
+  * Fix reset in recovery mode
+  * Fix updating OROM when a NIC is in recovery mode
+  * Fix FEC mode flag after reset
+  * Fix mirroring seid mixup
+  * Fix FWLLDP status reading on driver loading   
+  * Fix crash caused by stress setting of VF MAC addresses
+  * Fix HW_PERF build when HAVE_XDP_SUPPORT is defined
+  * Removed VF RDMA code from PF driver
+  * Add support for RHEL8.1
+  * Add reading EEE LPI statistics for X710-T*L cards ethtool --show-eee
+  * Add registration RDMA client devices to the virtual platform bus
+  * Add log when PF is entering and leaving Allmulti mode
+  * Add log missed "Negotiated" string in i40e_print_link_message()
+  * And some minor compilation issues fixes
+
+ -- James Fette <jfette@gmail.com>  Mon, 06 Jan 2020 11:27:22 +0400
+
 i40e (2.9.21) unstable; urgency=medium
 
   * Fix update visual effect for advertised FEC mode
