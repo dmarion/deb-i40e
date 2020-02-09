@@ -1,3 +1,21 @@
+i40e (2.10.19.82) unstable; urgency=medium
+
+  * Fix DCP enable/disable handling for 2.5Gbps & 5Gbps speeds
+  * Fix general protection fault during remove vlan from vf
+  * Fix for ethtool -m issue on X722 NIC
+  * Fix logging speed 2.5Gbps & 5Gbps in VF link message
+  * Fix support for logging EEE status in RHEL6.10
+  * Fix unsupported ethtool EEE parameters handling
+  * Fix error when iavf is reloaded
+  * Fix log on failed attempt to add vf mirror
+  * Fix driver compilation on kernel 5.2+ without CONFIG_DCB
+  * Add statistics for lpi duration for EEE supported cards
+  * Add EEE log info when link is up
+  * Add log TC creation failure when max num of queues is exceeded
+  * And some minor bugfixes
+
+ -- Damjan Marion <damarion@me.com>  Sun, 9 Feb 2020 18:20:43 +0100
+
 i40e (2.10.19.30) unstable; urgency=medium
 
   * Fix ingress/egress mirroring issues
