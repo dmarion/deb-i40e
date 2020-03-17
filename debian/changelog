@@ -1,3 +1,46 @@
+i40e (2.11.21) unstable; urgency=medium
+
+  * Fix minimized amount of busy-waiting during AQ send on Linux
+  * Fix compilation issue on latest 5.5.x kernels
+  * Fix sysfs for VF promiscuous mode
+  * Fix link speed reported after dis/en VF via link_state
+  * Fix proper loopback value after iavf driver reload
+  * Fix default value of allow_untagged flag to true
+  * Fix removal of PF to VF mirror rules
+  * Fix displaying queue statistics shown by ethtool
+  * Fix reload VF driver after configured vlan if trunk was set
+  * Fix get/set trunk when port VLAN is enabled
+  * Fix link up/down procedure
+  * Fix printing of actual link speed for 2.5 and 5 Gbps
+  * Fix VF failed during set MAC on VF with set mirroring
+  * Fix check mirror configuration
+  * Fix opcode msg on unsuccessful VF MAC change
+  * Fix incorrect flags for egress mirror
+  * Fix general protection fault during remove VLAN from VF
+  * Fix wrong error OK message during remove VF
+  * Fix restore mirror config after iavf reload
+  * Fix VF failed during changing MAC on VF with VLAN mirror
+  * Fix PF wait reset loop, make it more reliable
+  * Fix VF to VF ingress/egress mirroring
+  * Fix defect with adding/deleting ingress/egress mirror
+  * Fix for reading lpi duration statistics from FW
+  * Fix compilation under RHEL 8.1
+  * Add support for UDP source cloud filters
+  * Add preliminary VF-D 1.5 specification support
+  * Add of sysfs for max_tx_rate
+  * Add build time choise of pf->vf speed reporting protocol
+  * Add log entry when a NIC enters recovery mode after reboot
+  * Add Enable/Disable DCB on X710-T*L
+  * Add support F/W API version up to 1.10
+  * Add missing 0 length checks to a couple RSS opcodes
+  * Add missing AQ command buffer for sriov/loopback setup
+  * Add error handling to the i40e_set_vf_port_vlan function
+  * Add omit TC creation if first queue is not power of two
+  * Add support for text sending error msg during adding filter for VF
+  * Add MSI-X checks during creating tc queue maps
+
+ -- Damjan Marion <damarion@me.com>  Tue, 17 Mar 2020 13:00:23 +0100
+
 i40e (2.10.19.82) unstable; urgency=medium
 
   * Fix DCP enable/disable handling for 2.5Gbps & 5Gbps speeds
