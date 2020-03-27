@@ -1,3 +1,11 @@
+i40e (2.11.25) unstable; urgency=medium
+
+  * Deprecated VF's mac/vlan anti spoof feature control in PF's sysfs
+  * Fix synchronization of VLAN configuration between netdev ops and sysfs
+  * Add removal of VF's VLAN when associated VM is destroyed
+
+ -- Damjan Marion <dmarion@me.com>  Fri, 27 Mar 2020 13:18:04 +0100
+
 i40e (2.11.21) unstable; urgency=medium
 
   * Fix minimized amount of busy-waiting during AQ send on Linux
