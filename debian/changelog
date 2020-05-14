@@ -1,3 +1,31 @@
+i40e (2.11.29) unstable; urgency=medium
+
+  * Add PTP pins support for cards that support 1PPS output
+  * Add backward compatibility for link_speed report for iavf
+  * Del mac/vlan anti spoof in sysfs
+  * Del vlan_anti_spoof from spoofchk setting
+  * Fix restrict PTP PIN settings to PF 0
+  * Fix disable non-standard PTP pin sysfs interface for new kernels
+  * Fix scheduling while atomic possiblity
+  * Fix adding MAC filters when VLANs are added
+  * Fix warning message during remove iavf driver
+  * Fix issue while removing VFs
+  * Fix issue during rmmod i40e driver
+  * Fix check for invalid OEM firmware pointer
+  * Fix trunk after sync VLAN sysfs and netdev ops
+  * Fix tc mapping on real_num_tx_queues change
+  * Fix setting PVID in trunk
+  * Fix issue on VSI filter sync
+  * Fix - prevent VLAN restore on KVM destroy
+  * Fix allow_untagged to off, after trunk add
+  * Fix unload a driver when it is in pre-recovery mode
+  * Fix syncronization ip link show and sysfs
+  * Fix Invalid VF Identifier error in dmesg
+  * Fix combined issue after tc qdisc was failed
+  * Fix compilation issue on modern OSes and other minor bug fixes
+
+ -- Damjan Marion <dmarion@me.com>  Thu, 14 May 2020 21:28:26 +0200
+
 i40e (2.11.25) unstable; urgency=medium
 
   * Deprecated VF's mac/vlan anti spoof feature control in PF's sysfs
