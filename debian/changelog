@@ -1,3 +1,42 @@
+i40e (2.12.6) unstable; urgency=medium
+
+  * Add supported coalescing parameters for kernels >= 5.7.0
+  * Add err message when there is not enough space for vlan mirrors
+  * Add messgage when EMP reset occurs
+  * Add changing RS-Fec on FPK Backplane
+  * Add allow any queue in cloud filter addition
+  * Add return -ENOPKG when DDP package is not correct
+  * Add fourth part of driver version as subbuild
+  * Add VF-D allow_bcast parameter support
+  * Add VF-D queue_type parameter support
+  * Add check for queue allocation for the VF
+  * Add support for custom cloud filters for tunneled and non-tunneled packets
+  * Add reject cloud filters that don't set bit 62
+  * Del RSS hash key in case of decreasing queue amount only if hash is default
+  * Fix MAC address setting for a VF via Host/VM
+  * Fix clearing sriov/mac_list on VF removal
+  * Fix settings of RS-FEC and BaseR on FPK
+  * Fix possibility of integer overflow
+  * Fix issue when vlan 0 is added by VF
+  * Fix ATR CPU locality after turning ntuple off
+  * Fix the "ethtool -m" output for adapters without SFP cage
+  * Fix queue count in tcs
+  * Fix the limit more MACs are added than displayed
+  * Fix restore VF MSI-X state during PCI reset
+  * Fix issue when maximum queues is exceeded
+  * Fix lear vf status when iavf driver is being unloaded
+  * Fix wrong GFP flag in spin_lock section
+  * Fix and improvements to outer IP filters
+  * Fix mac_list is restored after iavf driver reset/reload
+  * Fix limit of MacVlan resources for every trusted VF
+  * Fix for sync VF driver reset
+  * Fix for failed to init adminq while VF reset
+  * Fix incorrect code in flow director implementation
+  * Fix failed opcode appearing if handling messages from VF
+  * Fix compilation issue on modern OSes and other minor bug fixes
+
+ -- Damjan Marion <dmarion@me.com>  Tue, 08 Sep 2020 12:35:40 +0200
+
 i40e (2.11.29) unstable; urgency=medium
 
   * Add PTP pins support for cards that support 1PPS output
