@@ -1,3 +1,35 @@
+i40e (2.13.10) unstable; urgency=medium
+
+  * Add PTP support for respective XXV710-DA2T cards
+  * Add S/W DCB support
+  * Add FlowDirector support for IPv6
+  * Add flow for IPv6 next header
+  * Add EEE LPI status check for X722 adapters
+  * Add meta pointer for direct access for bpf
+  * Add default VLAN filter setting to 0
+  * Add error message when MTU on device is out of the range
+  * Add supported coalescing parameters
+  * Fix rtnl lock issue
+  * Fix erroneous adapter reinitialization during recovery process
+  * Fix page counting for XDP_REDIRECT
+  * Fix rebuild VSI when XDP is ON and FW LLDP agent OFF
+  * Fix virtchnl_queue_select bitmap validation
+  * Fix spinlock not released if error while adding MAC to list
+  * Fix PHY configuration parameters when enabling EEE
+  * Fix removing driver while bare-metal VFs pass traffic
+  * Fix for link-flapping
+  * Fix MAC address setting for a VF via Host/VM
+  * Fix only MACs from host must be preserved
+  * Fix for correct max_pkt_size on VF RX queue
+  * Fix TC QDISC MQPRIO
+  * Fix queue-to-TC mapping on tx
+  * Fix reporting VLAN capability flag to VF
+  * Fix changing allow_untagged setting with PVID
+  * Fix flow bifurcation support
+  * Fix compilation issue on modern OSes and other minor bug fixes
+
+ -- Damjan Marion <dmarion@me.com>  Fri, 02 Oct 2020 10:55:48 +0200
+
 i40e (2.12.6) unstable; urgency=medium
 
   * Add supported coalescing parameters for kernels >= 5.7.0
