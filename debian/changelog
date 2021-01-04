@@ -1,3 +1,32 @@
+i40e (2.14.13) unstable; urgency=medium
+
+  * Add support for multiple traffic classes for VF-d 3.0
+  * Add PF1 PTP clock synchronization with 1PPS external source
+  * Add PTP clock synchronization on GPIO4
+  * Add XDP frame size to driver
+  * Add zero-initialization of AQ command structures
+  * Add mac/vlan anti spoof in sysfs
+  * Del limit of VF bandwidth in QoS
+  * Fix for VF MAC address 0
+  * Fix DCB CEE mode
+  * Fix changing ownership of LLDP between FW and SW
+  * Fix trusted VF in promiscuous not getting tagged packets
+  * Fix allow_bcast feature
+  * Fix for inability to enable VF through sysfs
+  * Fix Error I40E_AQ_RC_EINVAL when removing VFs
+  * Fix for i40e_set_max_tx_rate() cleaning
+  * Fix page counting for XDP_REDIRECT
+  * Fix PF reset failed on i40e_probe
+  * Fix addition of RX filters after enabling FW LLDP agent
+  * Fix build failures on current upstream and OSV kernels
+
+  NOTE: Known issues in this release:
+    Errors in statistics show number of errors in packets,
+  but not number of error packets.
+    It may be impossible to enable flow control of x710 by default in some cases.
+
+ -- Damjan Marion <dmarion@me.com>  Mon, 04 Jan 2021 23:36:41 +0100
+
 i40e (2.13.10) unstable; urgency=medium
 
   * Add PTP support for respective XXV710-DA2T cards
