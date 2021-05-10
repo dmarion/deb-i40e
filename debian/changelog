@@ -1,3 +1,35 @@
+Changelog for i40e-2.15.9
+===========================================================================
+Add forwarding GRE UDP and IP packets to VF
+Add a check to see if MFS is set
+Add warning when adding mirror vlan rule
+Add Asym_Pause to supported link modes
+Del rx_fragments and rx_jabber from rx_errors
+Fix delay after global reset
+Fix ATR queue selection
+Fix DCB enable flag while TCs are created
+Fix the link loss on driver unload
+Fix acquire VSI pointer only after VF is initialized
+Fix not blinking X722 with x557 PHY via ‘ethtool -p'
+Fix add tc filter for IPv6
+Fix race condition while deleting MAC/VLAN filters
+Fix setting PF MAC filters when changing MAC address
+Fix VF notification when changing vlan strip status through sysfs
+Fix PHY type identifiers for 2.5G and 5G adapters
+Fix display error code in dmesg
+Fix display statistics for veb_tc
+Fix return ENOPKG when right DDP package is missing
+Fix endianness conversions
+Fix build failures on current upstream and OSV kernels
+
+
+NOTE:  Receive Error counts may be higher than the actual packet error count
+---------------------------------------------------------------------
+When a packet is received with more than one error, two bad packets may be
+reported. This affects all devices based on 10G, or faster, controllers.
+
+-- James Fette <jfette@gmail.com> Mon, 10 May 2021 11:58:00 -0400
+
 i40e (2.14.13) unstable; urgency=medium
 
   * Add support for multiple traffic classes for VF-d 3.0
