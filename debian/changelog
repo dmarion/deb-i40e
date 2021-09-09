@@ -1,3 +1,31 @@
+i40e (2.16.11) unstable; urgency=medium
+
+  * Add limited QinQ support
+  * Add ability to change VFs default MAC address
+  * Add new virtchnl support
+  * Add error message for hw limitation to create new VSI
+  * Fix oops at i40e_rebuild()
+  * Fix ping is lost after configuring ADq on VF
+  * Fix race condition while adding MAC/VLAN filters
+  * Fix tc filter add to tc0 for VF
+  * Fix ATR queue selection
+  * Fix potentially uninitialized variables in NVM code
+  * Fix PTP on 5Gb links
+  * Fix NULL pointer dereference in i40e_dbg_dump_desc
+  * Fix rx_fragments and rx_jabber in rx_errors
+  * Fix display statistics for veb_tc
+  * Fix huge memory usage in kdump
+  * Fix the restart auto-negotiation after FEC modified
+  * Fix pre-set max number of queues for VF
+  * Fix incorrect argument in call to ipv6_addr_any()
+  * Fix mac filter delete when setting mac address
+  * Fix delete MAC for untrusted VF
+  * Fix error when deleting MAC filter for untrusted VF
+  * Fix several kernel-doc
+  * Fix build failures on current upstream and OSV kernels
+
+ -- Damjan Marion <dmarion@me.com>  Thu, 09 Sep 2021 11:41:53 +0200
+
 i40e (2.15.9) unstable; urgency=medium
 
   * Add forwarding GRE UDP and IP packets to VF
