@@ -19,7 +19,8 @@ override_dh_auto_build: $(TARBALL)
 override_dh_auto_install:
 	# src
 	mkdir -p debian/$(PKG)-dkms/usr/src/$(PKG)-$(VER)/$(PKG)
-	install -m 644 $(PKG)-$(VER)/src/* debian/$(PKG)-dkms/usr/src/$(PKG)-$(VER)
+	cp -r $(PKG)-$(VER)/src/* debian/$(PKG)-dkms/usr/src/$(PKG)-$(VER)
+	chmod -R 644 debian/$(PKG)-dkms/usr/src/$(PKG)-$(VER)
 	# man
 	mkdir -p debian/$(PKG)-dkms/usr/share/man/man7
 	install -m 644 $(PKG)-$(VER)/*.7 debian/$(PKG)-dkms/usr/share/man/man7

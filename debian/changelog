@@ -1,3 +1,12 @@
+i40e (2.17.15) unstable; urgency=medium
+
+  * Add Add VLAN pruning flag
+  * Add RDMA auxilary bus submodule support
+  * Fix error message in dmesg when add VLAN interface to VLAN port.
+  * Fix compilation issues for latest OS-es
+
+ -- Damjan Marion <dmarion@me.com>  Thu, 06 Jan 2022 12:35:41 +0100
+
 i40e (2.17.4) unstable; urgency=medium
 
   * Fix queues reservation scheme
