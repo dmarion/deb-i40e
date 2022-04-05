@@ -1,3 +1,22 @@
+i40e (2.18.9) unstable; urgency=medium
+
+  * Add support for X710-T2/4L for OCP 3.0
+  * Fix Crash of OOT RDMA with in tree i40e
+  * Fix PVID masking for VF port vlan qos setting
+  * Fix call trace when loading XDP program
+  * Fix reset path while removing the driver
+  * Fix interface init with MSI interrupts (no MSI-X)
+  * Fix VF's MAC Address change on VM
+  * Fix xps mapping to combined queues
+  * Fix warning when changing vf-vlan-pruning
+  * Fix ntuple setting change
+  * Fix ethtool coalesce handlers
+  * Fix dropped jumbo frames statistics
+  * Fix non-inclusive language from Intel documentation and code.
+  * Fix compilation issues for latest OS-es
+
+ -- Damjan Marion <dmarion@me.com>  Tue, 05 Apr 2022 18:35:03 +0200
+
 i40e (2.17.15) unstable; urgency=medium
 
   * Add Add VLAN pruning flag
