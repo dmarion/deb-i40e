@@ -1,3 +1,15 @@
+i40e (2.20.12) unstable; urgency=medium
+
+  * Add support for ethtool -s <interface> speed <speed in Mb>
+  * Fix call trace in setup_tx_descriptors
+  * Fix reading WoL settings from the adapter
+  * Fix ethtool rx-flow-hash setting for X722
+  * Fix supported speed on XXV710
+  * Fix compilation with CONFIG_I40E_DISABLE_PACKET_SPLIT
+  * Fix compilation issues for latest OS-es
+
+ -- Damjan Marion <dmarion@me.com>  Mon, 06 Mar 2023 11:25:34 +0000
+
 i40e (2.19.3) unstable; urgency=medium
 
   * Add Add handling of VF's VLAN V2 capabilities
