@@ -1,3 +1,12 @@
+i40e (2.22.18) unstable; urgency=medium
+
+  * add flag for disabling VF source pruning
+  * fix convert to new udp_tunnel infrastructure
+  * fix tx_stopped stat incremented in wrong place
+  * fix unable to set supported link speed on XXV710
+
+ -- Damjan Marion <dmarion@me.com>  Mon, 06 Mar 2023 11:28:02 +0000
+
 i40e (2.22.8) unstable; urgency=medium
 
   * Add support of RHEL 9.1 & RHEL 8.7
