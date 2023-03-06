@@ -1,3 +1,28 @@
+i40e (2.19.3) unstable; urgency=medium
+
+  * Add Add handling of VF's VLAN V2 capabilities
+  * Add UDP segmentation offload support
+  * Add support for F102IX722 card
+  * Add support for Inspur Ethernet Connection X722
+  * Add support for 1G_BASE_T_BC pci id 0x0dd2 card
+  * Fix panic of OOT RDMA with in tree i40e
+  * Fix disabling VFs due to PF error responses
+  * Fix steering traffic to VF when VF has L4 mode cloud filters
+  * Fix trunk and vlan interface for VF
+  * Fix ADq rate limiting for PF
+  * Fix allowed frame size calculation when setting up xdp
+  * Fix adding ADq filter to TC0
+  * Fix update VF MAC VLAN filters
+  * Fix RX class rule creation error
+  * Fix PVID masking for VF port vlan qos setting
+  * Fix change disable-fw-lldp when ADQ is configured
+  * Fix aq_ret uninitialized variable
+  * Fix adding 16 MAC to untrusted VF
+  * Fix restoring LED blink settings after "ethtool -p"
+  * Fix compilation issues for latest OS-es
+
+ -- Damjan Marion <dmarion@me.com>  Mon, 06 Mar 2023 11:24:16 +0000
+
 i40e (2.18.9) unstable; urgency=medium
 
   * Add support for X710-T2/4L for OCP 3.0
