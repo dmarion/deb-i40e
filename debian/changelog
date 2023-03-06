@@ -1,3 +1,21 @@
+i40e (2.21.12) unstable; urgency=medium
+
+  * Add support new 4-part IDs
+  * Add appropriate error message logged for incorrect duplex setting
+  * Add aggregate and export RX page reuse stat
+  * Fix no connection when disable vlan strip before adding vlan
+  * Fix memory leak when driver_register() fails
+  * Fix delete if NULL check before dev_kfree_skb
+  * Fix compilation issue with -DI40E_LEGACY_INTERRUPT -DI40E_MSI_INTERRUPT flags
+  * Fix convert to new udp_tunnel infrastructure
+  * Fix reading WoL settings from the adapter
+  * Fix disallow ip4 and ip6 l4_4_bytes
+  * Fix fd rule(src-ip) creation for flow type ip6
+  * Fix error message for hw limitation for TC VSI
+  * Fix compilation issues for latest OS-es
+
+ -- Damjan Marion <dmarion@me.com>  Mon, 06 Mar 2023 11:26:36 +0000
+
 i40e (2.20.12) unstable; urgency=medium
 
   * Add support for ethtool -s <interface> speed <speed in Mb>
